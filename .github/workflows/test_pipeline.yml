@@ -35,7 +35,7 @@ jobs:
         
         - name: Run test with coverage badge
           run: |
-            uv add coverage
+            uv add coverage-badge
             coverage run -m pytest
             coverage report
         
