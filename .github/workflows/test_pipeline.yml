@@ -33,11 +33,11 @@ jobs:
             source .venv/bin/activate
             pytest --cov=src --cov-report=term-missing tests/
         
-        - name: Run test with coverage badge
-          run: |
-            uv add coverage-badge
-            coverage run -m pytest
-            coverage report
+        # - name: Run test with coverage badge
+        #   run: |
+        #     uv add coverage-badge
+        #     coverage run -m pytest
+        #     coverage report
         
         - name: Upload coverage to Codecov
           uses: codecov/codecov-action@v4
