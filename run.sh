@@ -15,7 +15,7 @@ if [[ ! -d "$VENV_DIR" ]]; then
 fi
 
 echo "Activating Virtual Environment......"
-source $VENV_DIR/bin/activate
+source $VENV_DIR/Scripts/activate
 
 if [[ -f "requirements.txt" ]]; then
     echo "Installing dependencies from requirements.txt......."
