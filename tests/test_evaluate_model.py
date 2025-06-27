@@ -7,7 +7,7 @@ from src.models.train_model import train_model
 from src.models.evaluate_model import evaluate_model
 
 def test_evaluate_model_returns_metrics():
-    df = map_target(clean_data(load_data(df)))
+    df = map_target(clean_data(load_data()))
     X_train, X_test, y_train, y_test = split_data(df)
 
     pipeline = get_pipeline("Logistic_Regression")
@@ -15,6 +15,6 @@ def test_evaluate_model_returns_metrics():
     metrics = evaluate_model(trained_pipeline, X_test, y_test)
 
     assert isinstance(metrics, dict)
-    assert "Accuracy" in metrics
-    assert "ROC AUC" in metrics
-    assert "Classification Report" in metrics
+    assert "accuracy" in metrics
+    assert "roc_auc" in metrics
+    assert "classification_report" in metrics

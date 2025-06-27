@@ -6,7 +6,7 @@ from src.pipeline import get_pipeline
 from src.models.train_model import train_model
 
 def test_train_model_fits_pipeline():
-    df = map_target(clean_data(load_data(df)))
+    df = map_target(clean_data(load_data()))
 
     X_train, _, y_train, _ = split_data(df)
 
