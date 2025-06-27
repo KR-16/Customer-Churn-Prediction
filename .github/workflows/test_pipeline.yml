@@ -18,10 +18,14 @@ jobs:
           with:
             python-version: "3.12.7"
         
+        - name: Install uv
+          run: |
+            pip install uv
+        
         - name: Install dependencies
           run: |
-            python -m venv venv
-            source venv/bin/activate
+            uv venv
+            source .venv/bin/activate
             uv add -r requirements.txt
         
         - name: Run tests with coverage report
