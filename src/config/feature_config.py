@@ -23,3 +23,5 @@ USE_LABEL_ENCODER = False
 EVAL_METRIC = "logloss"
 SCALE_POS_WEIGHT = 1
 PROBABILITY = True
+
+ARTIFACTS_DIR = "artifacts_results"

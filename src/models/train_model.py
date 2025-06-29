@@ -4,7 +4,7 @@ from sklearn.pipeline import Pipeline
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-def train_model(pipeline: Pipeline, X_train, y_train) -> Pipeline:
+def train_model(pipeline: Pipeline, X_train, y_train, model_name = "model") -> Pipeline:
     """
     Trains the pipeline with the training data.
 

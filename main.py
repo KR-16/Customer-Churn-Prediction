@@ -8,6 +8,7 @@ from src.pipeline import get_pipeline
 from src.models.train_model import train_model
 from src.models.evaluate_model import evaluate_model
 from src.config.feature_config import MODEL_NAMES
+from src.mlflow.run_experiments import run_all_experiments
 
 
 logging.basicConfig(
@@ -35,7 +36,9 @@ def main():
         trained_pipeline = train_model(pipeline, X_train, y_train)
         metrics = evaluate_model(trained_pipeline, X_test, y_test)
         save_metrics(metrics, model_name)
-
+    
+    logger.info("Launching the MLFlow experiement")
+    run_all_experiments()
     logger.info("Churn Prediction Completed Successfully")
 
 

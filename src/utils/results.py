@@ -5,7 +5,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-def save_metrics(metrics: dict, model_name: str, output_dir: str = "results") -> None:
+def save_metrics(metrics: dict, model_name: str = "", output_dir: str = "results", filename: str = None) -> None:
     """
     Save evaluation metrics to a JSON file under results directory
 
